@@ -1,0 +1,72 @@
+body{
+    background: #262e3a !important;
+}
+.formulario{
+    background: rgba(50, 49, 49, 0.249);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, -0, -0, 0.568);
+    color: white;
+}
+.form-control{
+    background: rgba(56, 55, 55, 0.3);
+    border-style: none;
+    color: white;
+    transition: 0.5s ease-in;
+}
+.form-control:focus{
+    background: hsla(216, 8%, 25%, 0.963);
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+.form-control::placeholder{
+    color: white;
+}
+.Ingresar{
+    background: #048ce7;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700!important;
+    color: white;
+    box-shadow: 0 0 30px rgba(23, 85, 114, 0.836);
+    transition: 0.5s ease-in;
+}
+.Ingresar:hover{
+    color: white;
+}
+
+.registrate{
+    text-decoration-line: underline;
+}
+.registrate:hover{
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.error{
+    font-size: small;
+    color: red;
+    margin-top: 12px;
+    margin-left: 5px;
+    display: none;
+}
+
+
+
+/* .registrarse{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    font-size: 18px;
+    font-weight: 700!important;
+    padding: 10px;
+    background: rgba(0, -0, -0, .5);
+    border-radius: 10px;
+}
+.registrarse:hover{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+} */
