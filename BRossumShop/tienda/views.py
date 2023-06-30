@@ -51,13 +51,14 @@ def exit(request):
     return redirect('/')
 
 
-
-def eliminar_usuario(request, nombre_usuario):
-
+@login_required
+def eliminar_usuario(request):
+    user = request.user
     try:
-        usuario = User.objects.get(username=nombre_usuario)
-        usuario.delete()
-        # Realizar cualquier acción adicional después de eliminar el usuario
-        return HttpResponse("El usuario ha sido eliminado correctamente.")
+        user = User.objects.get(username=user.username)
+        user.is_active = False
+        user.save()
+        return redirect('login')
     except User.DoesNotExist:
-        return HttpResponse("El usuario no existe.")
+        return redirect('login')
+
