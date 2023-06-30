@@ -1,6 +1,7 @@
 body {
     background: #262e3a !important;
     min-width: 349px;
+    color: aliceblue !important;
 }
 
 .no-padding {
@@ -46,33 +47,6 @@ body {
     height: 18vh;
 }
 
-.card {
-    max-width: 12rem;
-    max-height: 20rem;
-    transition: box-shadow 0.2s ease;
-    background-color: #596B88 !important;
-    color: white !important;
-
-    border-radius: 0.5rem;
-
-    cursor: pointer;
-
-    width: 33vw;
-    height: 25vh;
-}
-
-.anuncio {
-    width: 100vw;
-    height: 30vh;
-}
-
-a {
-    text-decoration: none;
-}
-
-.card:hover {
-    box-shadow: 0 0.1rem 0.4rem rgba(255, 255, 255, 0.3);
-}
 
 .bg-dark {
     background-color: #181E25 !important;
