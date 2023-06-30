@@ -1,7 +1,9 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from .forms import FormularioUsuario, FormularioLogin
+from django.contrib.auth.models import User
 # Create your views here.
 
 
@@ -47,3 +49,15 @@ def registro(request):
 def exit(request):
     logout(request)
     return redirect('/')
+
+
+
+def eliminar_usuario(request, nombre_usuario):
+
+    try:
+        usuario = User.objects.get(username=nombre_usuario)
+        usuario.delete()
+        # Realizar cualquier acción adicional después de eliminar el usuario
+        return HttpResponse("El usuario ha sido eliminado correctamente.")
+    except User.DoesNotExist:
+        return HttpResponse("El usuario no existe.")
