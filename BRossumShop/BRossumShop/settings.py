@@ -32,7 +32,10 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL = 'perfil'
 LOGOUT_REDIRECT_URL = 'index'
 
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 # Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -49,6 +52,8 @@ INSTALLED_APPS = [
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
 
 
 MIDDLEWARE = [

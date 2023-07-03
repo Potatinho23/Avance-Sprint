@@ -19,11 +19,12 @@
             <h1 class="">Modificar Datos</h1>
           </div>
             {{ form |crispy }}
+            
           <div class="col-6 pt-3 text-center">
-            <button href="{% url 'perfil' %}" type="submit" class="btn btn-primary">Guardar Cambios</button>
+            <input type="submit" value="Guardar Cambios" class="btn btn-primary">
           </div>
           <div class="col-6 pt-3 text-center">
-            <button href="{% url 'perfil' %}" type="submit" class="btn btn-danger">Cancelar</button>
+            <input type="reset" value="Cancelar" class="btn btn-danger">
           </div>
 
         </form>

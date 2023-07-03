@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from .forms import FormularioUsuario, FormularioLogin
 from django.contrib.auth.models import User
+from django.contrib import messages
 # Create your views here.
 
 
