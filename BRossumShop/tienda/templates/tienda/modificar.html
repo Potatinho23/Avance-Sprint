@@ -1,0 +1,36 @@
+{% extends 'tienda/base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'tienda/'%}css/style_modificar.css" />
+{% endblock css %}
+
+
+{% block contenido %}
+
+
+<div class="container">
+    <div class="row justify-content-center pt-2 mt-5 m-1">
+      <div class="col-md-8 col-sm-10 col-xl-5 col-lg-6 formulario">
+        <form class="row g-3" action="" method="post">
+          {% csrf_token %}
+          <div class="form-group text-center pt-3">
+            <h1 class="">Modificar Datos</h1>
+          </div>
+            {{ form |crispy }}
+          <div class="col-6 pt-3 text-center">
+            <button href="{% url 'perfil' %}" type="submit" class="btn btn-primary">Guardar Cambios</button>
+          </div>
+          <div class="col-6 pt-3 text-center">
+            <button href="{% url 'perfil' %}" type="submit" class="btn btn-danger">Cancelar</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock contenido %}

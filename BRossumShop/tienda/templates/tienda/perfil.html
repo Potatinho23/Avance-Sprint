@@ -19,7 +19,7 @@
           <div class="card-body">
             <h5 class="card-title text-light pt-2">{{user.username}}</h5>
             <p class="card-text text-light"></p>
-            <a href="#" class="btn btn-primary pt-2">Editar perfil</a>
+            <a href="{% url 'modificar' user.username %}" class="btn btn-primary pt-2">Editar perfil</a>
           </div>
         </div>
       </div>

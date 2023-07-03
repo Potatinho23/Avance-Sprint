@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from .forms import FormularioUsuario, FormularioLogin
@@ -61,4 +61,22 @@ def eliminar_usuario(request):
         return redirect('login')
     except User.DoesNotExist:
         return redirect('login')
+    
+
+def modificar_datos(request, username):
+    
+    usuario = get_object_or_404(User, username = username)
+
+    data = {
+        'form':FormularioUsuario(instance=usuario)
+    }
+
+    if request.method == 'POST':
+        formulario = FormularioUsuario(data=request.POST, instance=usuario)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect(to='perfil')
+        data['form'] = formulario
+    return render(request, 'tienda/modificar.html', data)
+
 
