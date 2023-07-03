@@ -11,6 +11,9 @@ from django.contrib import messages
 def index(request):
     return render(request, 'tienda/index.html')
 
+def abogado(request):
+    return render(request, 'tienda/abogado.html')
+
 
 def acercade(request):
     return render(request, 'tienda/acercade.html')
