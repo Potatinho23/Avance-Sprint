@@ -24,7 +24,7 @@
             <input type="submit" value="Guardar Cambios" class="btn btn-primary">
           </div>
           <div class="col-6 pt-3 text-center">
-            <input type="reset" value="Cancelar" class="btn btn-danger">
+            <input type="reset" value="Cancelar" class="btn btn-danger" id="botonCancelar">
           </div>
 
         </form>
@@ -33,5 +33,13 @@
   </div>
 
 
+  <script>
+    var botonCancelar = document.getElementById("botonCancelar");
+
+    botonCancelar.addEventListener("click", function() {
+
+      history.go(-1);
+    });
+  </script>
 
 {% endblock contenido %}
