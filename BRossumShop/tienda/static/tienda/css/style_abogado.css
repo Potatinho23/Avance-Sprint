@@ -1,0 +1,92 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+body{
+    background: #262e3a !important;
+}
+
+
+.card-img-top{
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 100px !important;
+}
+.card{
+    background: #262e3a !important;
+    color: white !important;
+}
+
+.img-fluid{
+    border-radius: 100px !important;
+}
+
+.btn.Carrito {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.btn svg {
+    margin-right: 5px !important;
+}
+
+.btn p {
+    margin: 0 !important;
+}
+
+#iphone{
+    width: 75px !important;
+    border-radius: 10px !important;
+}
+
+.Cancelar{
+    background: #c20e0e !important;
+    padding: 10px !important;
+    font-size: 12px !important;
+    font-weight: 700!important;
+    color: white !important;
+    box-shadow: 0 0 30px rgba(182, 3, 3, 0.836) !important;
+    transition: 0.5s ease-in !important;
+}
+
+#nav-tab{
+    border: 0 !important;
+}
+
+.Calificar{
+    background: #1abd35 !important;
+    padding: 10px !important;
+    font-size: 16px !important;
+    font-weight: 700!important;
+    color: white !important;
+    box-shadow: 0 0 30px rgba(30, 169, 67, 0.836) !important;
+    transition: 0.5s ease-in !important;
+}
+
+main{
+    height: 80vh !important;
+}
+
+.balon{
+    background: red !important;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 100px !important;
+    position: absolute !important;
+    bottom: 5px !important;
+    right: 107px !important;
+    padding: 5px !important;
+    display: none !important;
+}

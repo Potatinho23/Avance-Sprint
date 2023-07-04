@@ -1,0 +1,83 @@
+{% extends 'tienda/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'tienda/'%}css/style_abogado.css" />
+{% endblock css %}
+
+
+{% block contenido %}
+<!-- cuerpo  -->
+
+{% if messages %}
+    {% for m in messages %}
+        {{m}}
+    {% endfor %}
+{% endif%} 
+
+<div class="container overflow-hidden text-center">
+  <div class="row gx-5">
+    <div class="col">
+      <div class="p-3">
+        <div class=" card-dark text-center pt-5" style="width: 18rem;">
+          <img src="{% static 'tienda/'%}img/perfil.jpg" class="card-img-top mx-auto d-block" alt="imagen_usuario">
+          <div class="card-body">
+            <h5 class="card-title text-light pt-2">{{user.username}}</h5>
+            <p class="card-text text-light"></p>
+            <a href="" class="btn btn-primary pt-2">Editar perfil</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="p-3">
+        <div class=" card-dark text-center pt-5" style="width: 18rem;">
+          <img src="{% static 'tienda/'%}img/perfil.jpg" class="card-img-top mx-auto d-block" alt="imagen_usuario">
+          <div class="card-body">
+            <h5 class="card-title text-light pt-2">{{user.username}}</h5>
+            <p class="card-text text-light"></p>
+            <a href="{% url 'eliminar' %}" class="btn btn-danger pt-2">Elimiar Cuenta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<script>
+  function notificarUsuario(id) {
+    alert("Usuario " + id + " notificado");
+  }
+</script>
+<table>
+  <tr>
+    <th>Usuario</th>
+    <th>Acción</th>
+  </tr>
+  <tr>
+    <td>Usuario 1</td>
+    <td><button onclick="notificarUsuario(1)">Notificar</button></td>
+  </tr>
+  <tr>
+    <td>Usuario 2</td>
+    <td><button onclick="notificarUsuario(2)">Notificar</button></td>
+  </tr>
+  <tr>
+    <td>Usuario 3</td>
+    <td><button onclick="notificarUsuario(3)">Notificar</button></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+
+
+
+
+<!-- scripts -->
+{% endblock %}
+{% block javascript %}
+<script src="{% static 'tienda/'%}js/perfil.js"></script>
+{% endblock %}
