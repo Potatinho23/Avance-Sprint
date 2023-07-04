@@ -51,10 +51,27 @@
 <br>
 
 
-
+<div id="Modal" class="modal">
+  <div class="modal-content">
+    <!-- Contenido del modal -->
+  </div>
+</div>
 
 <!-- scripts -->
-{% endblock %}
+<script>
+  // Verificar si se realizaron cambios en la pestaña 2
+  var cambiosRealizados = localStorage.getItem("cambiosRealizados");
+  if (cambiosRealizados === "true") {
+    // Mostrar el modal si se realizaron cambios
+    var miModal = document.getElementById("miModal");
+    miModal.style.display = "block";
+
+    // Restablecer el estado de los cambios en el almacenamiento local
+    localStorage.setItem("cambiosRealizados", "false");
+  }
+</script>
+
+{% endblock contenido %}
 {% block javascript %}
 <script src="{% static 'tienda/'%}js/perfil.js"></script>
 {% endblock %}

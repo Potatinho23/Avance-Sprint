@@ -63,7 +63,7 @@ def eliminar_usuario(request):
     except User.DoesNotExist:
         return redirect('login')
     
-
+@login_required
 def modificar_datos(request, username):
     
     usuario = get_object_or_404(User, username = username)
